@@ -1,0 +1,14 @@
+import sys
+
+n = int(sys.stdin.readline())
+
+def factorial(n):
+    if n == 1:
+        return 1
+
+    return factorial(n-1) * n
+
+if n == 0:
+    print(1)
+else:
+    print(factorial(n))
