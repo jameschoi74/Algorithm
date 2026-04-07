@@ -11,7 +11,7 @@ for i in range(2, int((123456*2) ** 0.5)+1):
         isPrime[j] = 0
 
 while True:
-    n = int(sys.stdin.readline())g
+    n = int(sys.stdin.readline())
 
     if n == 0:
         break

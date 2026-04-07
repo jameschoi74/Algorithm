@@ -12,6 +12,11 @@ for i in range(2, int(MAX_VALUE**0.5) + 1):
     for j in range(i*i, MAX_VALUE+1, i):
         isPrime[j] = 0
 
+primes = set()
+for i in range(1, MAX_VALUE+1):
+    if isPrime[i]:
+        primes.add(i)
+
 t = int(sys.stdin.readline().strip())
 
 for _ in range(t):
@@ -19,7 +24,7 @@ for _ in range(t):
 
     cnt = 0
     for i in range(2, n//2 + 1):
-        if isPrime[i] and isPrime[n-i]:
+        if i in primes and n-i in primes:
             cnt += 1
     print(cnt)
 
